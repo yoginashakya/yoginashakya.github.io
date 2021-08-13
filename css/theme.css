@@ -575,7 +575,7 @@ figure figcaption {
   background: #fff url("") no-repeat center center;
   width: 100%;
   float: left;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
   clear: both
 }
 
@@ -745,8 +745,8 @@ body.offcanvas .yg-nav-toggle {
   .yg-about,
   .yg-services,
   .yg-contact {
-    padding-top: 5em;
-    padding-bottom: 5em
+    padding-top: 3.5em;
+    padding-bottom: 3.5em
   }
 }
 
