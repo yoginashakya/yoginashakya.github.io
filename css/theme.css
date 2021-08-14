@@ -800,7 +800,8 @@ body.offcanvas .yg-nav-toggle {
 }
 
 .hire h2 {
-  line-height: 1.5
+  line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .hire .btn-hire {
