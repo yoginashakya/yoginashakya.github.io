@@ -1,576 +1,497 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Yogina Shakya</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="author" content="" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yogina Shakya — HR Professional, Nepal</title>
+<meta name="description" content="Yogina Shakya helps scaling companies build a strong HR function — HR tech, policy, culture and compliance. Based in Kathmandu, working with clients at home and abroad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2B2440;          /* deep aubergine */
+  --ink-soft:#544C6B;     /* muted plum for body */
+  --paper:#FBFAF6;        /* warm white */
+  --panel:#F1EEE6;        /* recessed panel */
+  --marigold:#E8A33D;     /* sayapatri */
+  --saffron:#C2761B;      /* deep marigold, AA on paper */
+  --line:#DCD7CB;
+  --max:1140px;
+  --d:'Young Serif',Georgia,serif;
+  --b:'Archivo',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--b);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--marigold);color:var(--ink)}
+:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:2px}
 
-  <meta property="og:title" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:image" content="" />
-  <meta name="twitter:url" content="" />
-  <meta name="twitter:card" content="" />
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 
-  <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+/* ---------- nav ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--d);font-size:1.25rem;text-decoration:none;letter-spacing:.01em}
+.brand em{font-style:normal;color:var(--saffron)}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);transition:color .2s}
+.nav ul a:hover{color:var(--saffron)}
+.nav .cta{border:1.5px solid var(--ink);padding:9px 18px;border-radius:999px;color:var(--ink);transition:background .2s,color .2s}
+.nav .cta:hover{background:var(--ink);color:var(--paper)}
+.menu-btn{display:none;background:none;border:none;font:inherit;cursor:pointer}
 
-  <link rel="stylesheet" href="css/all.css" />
-  <link rel="stylesheet" href="css/theme.css" />
-  <script src="js/modernizr-2.6.2.min.js"></script>
+/* ---------- hero ---------- */
+.hero{padding:96px 0 88px;position:relative;overflow:hidden}
+.hero .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:22px}
+.hero h1{font-family:var(--d);font-weight:400;font-size:clamp(2.6rem,6.4vw,4.9rem);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
+.hero h1 .hl{position:relative;white-space:nowrap}
+.hero h1 .hl::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.08em;height:.34em;background:var(--marigold);z-index:-1;transform:scaleX(0);transform-origin:left;animation:sweep .7s .45s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes sweep{to{transform:scaleX(1)}}
+.hero p.lede{margin-top:28px;max-width:54ch;font-size:1.12rem;color:var(--ink-soft)}
+.hero-actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:999px;transition:transform .2s,box-shadow .2s}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(43,36,64,.22)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.hero-marks{margin-top:56px;display:flex;gap:44px;flex-wrap:wrap}
+.mark .n{font-family:var(--d);font-size:1.9rem;color:var(--ink)}
+.mark .l{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+/* petal motif */
+.petals{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:380px;height:380px;opacity:.9;pointer-events:none}
+@media(max-width:900px){.petals{display:none}}
 
-  <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+/* ---------- section scaffolding ---------- */
+section{padding:88px 0}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:14px}
+h2{font-family:var(--d);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;letter-spacing:-.01em}
+.section-head{max-width:640px;margin-bottom:54px}
+.section-head p{margin-top:16px;color:var(--ink-soft)}
+
+/* ---------- about ---------- */
+.about{background:var(--ink);color:var(--paper)}
+.about .kicker{color:var(--marigold)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-story p{color:#CFC9DE;margin-bottom:18px}
+.about-story p strong{color:var(--paper)}
+.pull{font-family:var(--d);font-size:1.45rem;line-height:1.4;color:var(--paper);border-left:3px solid var(--marigold);padding-left:22px;margin:8px 0 26px}
+.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(251,250,246,.16);border:1px solid rgba(251,250,246,.16);border-radius:14px;overflow:hidden}
+.pillar{background:var(--ink);padding:26px 24px}
+.pillar h3{font-family:var(--d);font-weight:400;font-size:1.08rem;margin-bottom:8px}
+.pillar p{font-size:.92rem;color:#B9B2CC}
+.pillar svg{width:26px;height:26px;margin-bottom:14px;stroke:var(--marigold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(43,36,64,.1);border-color:var(--marigold)}
+.svc .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--saffron);background:#FBF1DF;border-radius:999px;padding:4px 12px;margin-bottom:18px}
+.svc h3{font-family:var(--d);font-weight:400;font-size:1.18rem;line-height:1.3;margin-bottom:10px}
+.svc p{font-size:.95rem;color:var(--ink-soft)}
+
+/* ---------- experience: the career thread ---------- */
+.exp{background:var(--panel)}
+.thread{position:relative;max-width:820px;margin-top:8px}
+.thread-svg{position:absolute;left:0;top:0;width:60px;height:100%;overflow:visible;pointer-events:none}
+.thread-svg .track{stroke:var(--line);stroke-width:2;fill:none}
+.thread-svg .prog{stroke:url(#threadGrad);stroke-width:3;fill:none;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(232,163,61,.65))}
+.thread-svg .rider{fill:var(--marigold);filter:drop-shadow(0 0 8px rgba(232,163,61,.9))}
+.job{position:relative;padding:0 0 44px 52px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--paper);border:2.5px solid var(--ink);transition:background .3s,border-color .3s,box-shadow .3s;z-index:1}
+.job.lit::before{background:var(--marigold);border-color:var(--saffron);box-shadow:0 0 10px rgba(232,163,61,.6)}
+.job.now::before{background:var(--marigold);border-color:var(--marigold)}
+.job .when{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--saffron)}
+.job h3{font-family:var(--d);font-weight:400;font-size:1.3rem;margin:6px 0 2px}
+.job .org{font-weight:600;font-size:.95rem;color:var(--ink-soft);margin-bottom:8px}
+.job p{font-size:.96rem;color:var(--ink-soft);max-width:60ch}
+
+/* ---------- engagements ---------- */
+.eng-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.eng{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;transition:border-color .2s,transform .2s}
+.eng:hover{border-color:var(--ink);transform:translateY(-3px)}
+.eng .role{font-family:var(--d);font-weight:400;font-size:1.05rem;line-height:1.35}
+.eng .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font-size:.83rem;color:var(--ink-soft)}
+.eng .meta .org{font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.76rem}
+.eng .meta .yr{color:var(--saffron);font-weight:600}
+
+/* ---------- blog ---------- */
+.blog{background:var(--ink);color:var(--paper)}
+.blog .kicker{color:var(--marigold)}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{display:flex;flex-direction:column;text-decoration:none;background:rgba(251,250,246,.05);border:1px solid rgba(251,250,246,.14);border-radius:14px;padding:26px;transition:background .2s,border-color .2s}
+.post:hover{background:rgba(251,250,246,.1);border-color:var(--marigold)}
+.post .cat{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--marigold)}
+.post h3{font-family:var(--d);font-weight:400;font-size:1.12rem;line-height:1.35;margin:12px 0 10px;color:var(--paper)}
+.post p{font-size:.9rem;color:#B9B2CC;flex:1}
+.post .date{margin-top:18px;font-size:.8rem;color:#8E86A8}
+.blog-more{margin-top:34px}
+.blog-more a{color:var(--marigold);font-weight:600;text-decoration:none}
+.blog-more a:hover{text-decoration:underline}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:110px 0}
+.contact h2{font-size:clamp(2.1rem,4.5vw,3.2rem);max-width:18ch;margin:0 auto}
+.contact p{margin:20px auto 0;max-width:46ch;color:var(--ink-soft)}
+.contact .hero-actions{justify-content:center;margin-top:38px}
+.contact .loc{margin-top:30px;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:.85rem;color:var(--ink-soft)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+footer a{color:var(--saffron);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero h1 .hl::after{animation:none;transform:scaleX(1)}
+  .svc,.eng,.post,.btn{transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .svc-grid,.posts,.eng-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:10px 28px 22px}
+  .nav ul.open{display:flex}
+  .nav ul li{padding:12px 0}
+  .nav .cta{display:inline-block;margin-top:6px}
+  .menu-btn{display:block;font-size:1.5rem;line-height:1;color:var(--ink)}
+  .svc-grid,.posts,.eng-grid,.about-pillars{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .hero{padding:64px 0}
+  .hero-marks{gap:28px}
+}
+</style>
 </head>
-
 <body>
-  <div id="yogina-page">
-    <div class="container-wrap">
-      <a href="#" class="js-yg-nav-toggle yg-nav-toggle" data-toggle="collapse" data-target="#navbar"
-        aria-expanded="false" aria-controls="navbar"><i></i></a>
-      <aside id="yg-aside" role="complementary" class="border js-fullheight">
-        <div class="text-center">
-          <div class="author-img" style="background-image:url(images/IMG_5273.jpeg)"></div>
-          <h1 id="yg-logo"><a href="index.html">Yogina Shayka</a></h1>
-          <span class="position"><a href="#">HR Professional</a> from Nepal</span>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Yogina <em>Shakya</em></a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#engagements">Engagements</a></li>
+      <li><a href="#blog">Writing</a></li>
+      <li><a class="cta" href="#contact">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap" style="position:relative">
+    <svg class="petals" viewBox="0 0 380 380" aria-hidden="true">
+      <g transform="translate(190,190)">
+        <g id="p"><ellipse cx="0" cy="-104" rx="34" ry="86" fill="#E8A33D" opacity=".16"/></g>
+        <use href="#p" transform="rotate(45)"/><use href="#p" transform="rotate(90)"/>
+        <use href="#p" transform="rotate(135)"/><use href="#p" transform="rotate(180)"/>
+        <use href="#p" transform="rotate(225)"/><use href="#p" transform="rotate(270)"/>
+        <use href="#p" transform="rotate(315)"/>
+        <circle r="40" fill="#E8A33D" opacity=".3"/>
+        <circle r="14" fill="#C2761B" opacity=".55"/>
+      </g>
+    </svg>
+    <p class="eyebrow">HR Professional · Kathmandu, Nepal</p>
+    <h1>People grow companies.<br>I build the <span class="hl">HR&nbsp;function</span> that grows people.</h1>
+    <p class="lede">I'm Yogina Shakya. I help scaling companies in Nepal and abroad set up the HR foundations — tech, policy, process and culture — so their people teams can spend less time on admin and more time on people.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact">Work with me</a>
+      <a class="btn btn-ghost" href="#experience">See my track record</a>
+    </div>
+    <div class="hero-marks">
+      <div class="mark"><div class="n">50+</div><div class="l">Projects delivered</div></div>
+      <div class="mark"><div class="n">14 yrs</div><div class="l">Across HR &amp; operations</div></div>
+      <div class="mark"><div class="n">2</div><div class="l">Markets — Nepal &amp; abroad</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Who I am</p>
+      <h2>HR chose me before I chose it.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-story reveal">
+        <p><strong>It started in a call center.</strong> In my very first job, I found myself in awe of the HR colleagues running interviews and training sessions — at the center of workplace camaraderie while quietly carrying the organisation behind the scenes.</p>
+        <p>Five years into my career, I took the leap into HR at an IT company with no academic background in the field — learning everything on the job. On reflection, it was one of the best decisions of my life.</p>
+        <p class="pull">HR professionals are often the ones who need help, so that they can in turn help others.</p>
+        <p>The promise of HR is to bring out the best in people. But in practice, HR teams drown in administrative work before they ever get to that promise. That's the gap I work in: I build the systems, policies and culture documentation that free HR teams to do the work that matters.</p>
+      </div>
+      <div class="about-pillars reveal">
+        <div class="pillar">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h4"/></svg>
+          <h3>HR Tech Platform</h3>
+          <p>Selecting and implementing the right stack for your stage and size.</p>
         </div>
-        <nav id="yg-main-menu" role="navigation" class="navbar">
-          <div id="navbar" class="collapse">
-            <ul>
-              <li class="active"><a href="#" data-nav-section="home">Home</a></li>
-              <li><a href="#" data-nav-section="about">About</a></li>
-              <li><a href="#" data-nav-section="services">Services</a></li>
-              <li><a href="#" data-nav-section="experience">Experience</a></li>
-              <li><a href="#" data-nav-section="engagements">Engagements</a></li>
-              <li><a href="#" data-nav-section="blog">Blog</a></li>
-              <li><a href="#" data-nav-section="contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="yg-footer">
-          <p><small>
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script> All rights reserved <i class="icon-heart" aria-hidden="true"></i>
-            </small></p>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/yogina-shakya-705298a0/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-          </ul>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg>
+          <h3>Company Policies</h3>
+          <p>Clear, compliant policies people actually read and use.</p>
         </div>
-      </aside>
-      <div id="yg-main">
-        <section id="yg-hero" class="js-fullheight" data-section="home">
-          <div class="flexslider js-fullheight">
-            <ul class="slides">
-              <li style="background-image:url(images/bg1.jpg)">
-              <!-- <li> -->
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-                      <div class="slider-text-inner js-fullheight">
-                        <div class="desc">
-                          <h1>Hi! <br>I'm Yogina</h1>
-                          <h2>Nice to meet you.</h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li style="background-image:url(images/bg1.jpg)">
-              <!-- <li> -->
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-                      <div class="slider-text-inner">
-                        <div class="desc">
-                          <h1>I work as an <br>HR Professional</h1>
-                          <h2>originally from Nepal serving clients at home and abroad.</h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="yg-about" data-section="about">
-          <div class="yg-narrow-content">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="col-md-12">
-                    <div class="about-desc">
-                      <span class="heading-meta">About</span>
-                      <h2 class="yg-heading">Who Am I?</h2>
-                      <p><strong>Hi I'm Yogina Shakya.</strong> The role of Human Resources became apparent to me when I was in my very first job as a call center representative. I have always been a person with sharp observational skills and great attention to detail. The contribution of the HR function was very clear to me in the early stages of my professional life. In that call center, I found myself in awe of my HR colleagues conducting interviews and leading training sessions. I had great admiration for the HR staff who were often at the center of workplace camaraderie, whilst also diligently carrying out important duties behind the scenes.</p>
-                      <p>Later on, I worked a front desk job, performing essential administrative tasks and doing anything and everything to make sure the office operations ran smoothly. But in this role, the lines of responsibility were often blurred and it was becoming increasingly evident to me that matters relating to the management of personnel were my passion.
-                      </p>
-                      <p>Around 5 years into my career, I took the leap to become an HR practitioner at an IT company. At the time, I did not have an academic background in HR and so I learned everything on the job through hard work and dedication. On reflection, I believe taking this step into HR was one of the best decisions of my life.
-                      </p>
-                      <p>Whenever asked why I chose to specialize in HR, my answer had always been to bring out the best in people and to help them grow. I always felt that should be the main focus of HR. But, once I started in her role as an HR practitioner, I soon realized that HR professionals do not always have adequate time for that because they are overloaded with administrative work. It was at this point that I recognized that HR professionals are often the ones who need help, so that they can in turn help others. </p>
-                      <p>With my experience of working in the HR function of the scaling up business, I want to support companies build a strong HR function to build, grow and sustain their business.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="services color-1">
-                      <span class="icon2"><i class="fab fa-simplybuilt"></i></span>
-                      <h3>HR Tech Platform</h3>
-                    </div>
-                  </div>
-                  <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-                    <div class="services color-2">
-                      <span class="icon2"><i class="fas fa-file-contract"></i></span>
-                      <h3>Company Policies</h3>
-                    </div>
-                  </div>
-                  <div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-                    <div class="services color-3">
-                      <span class="icon2"><i class="fas fa-file-contract"></i></span>
-                      <h3>Company Culture</h3>
-                    </div>
-                  </div>
-                  <div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-                    <div class="services color-4">
-                      <span class="icon2"><i class="fas fa-spa"></i></span>
-                      <h3>Employee Wellbeing</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="hire">
-                      <h2>Track record of completing  50+ projects in HR, Digital Marketing, Product Launch and  Community Empowerment & Upliftment projects.</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="yg-services" data-section="services">
-          <div class="yg-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">What I do?</span>
-                <h2 class="yg-heading">Here are some of my expertise</h2>
-              </div>
-            </div>
-            <div class="row row-pt-md">
-              <div class="col-md-4 text-center animate-box">
-                <div class="services color-1">
-                  <span class="icon">
-                    <i class="icon-bulb"></i>
-                  </span>
-                  <div class="desc">
-                    <h3>HR Tech Stack Selection & Implementation</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <div class="services color-2">
-                  <span class="icon">
-                    <i class="icon-data"></i>
-                  </span>
-                  <div class="desc">
-                    <h3>Policies Creation</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <div class="services color-3">
-                  <span class="icon">
-                    <i class="fas fa-book"></i>
-                  </span>
-                  <div class="desc">
-                    <h3>Process Creation & Documentation</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <div class="services color-4">
-                  <span class="icon">
-                    <i class="fas fa-check-circle"></i>
-                  </span>
-                  <div class="desc">
-                    <h3>HR Compliance Audit</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <div class="services color-5">
-                  <span class="icon">
-                    <i class="fas fa-file-contract"></i>
-                  </span>
-                  <div class="desc">
-                    <h3>Company Culture Documentation</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <div class="services color-6">
-                  <span class="icon">
-                    <i class="fas fa-project-diagram"></i>
-                  </span>
-                  <div class="desc">
-                    <h3>HR Projects focused on various aspects of HR</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div id="yg-counter" class="yg-counters" style="background-image:url(images/bg_1.jpeg)"
-          data-stellar-background-ratio="0.5">
-          <div class="overlay"></div>
-          <div class="yg-narrow-content">
-            <div class="row">
-            </div>
-            <div class="row">
-              <div class="col-md-4 text-center animate-box">
-                <span class="yg-counter js-counter" data-from="0" data-to="56" data-speed="5000"
-                  data-refresh-interval="50"></span>
-                <span class="yg-counter-label">Projects</span>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <span class="yg-counter js-counter" data-from="0" data-to="15" data-speed="5000"
-                  data-refresh-interval="50"></span>
-                <span class="yg-counter-label">Clients</span>
-              </div>
-              <div class="col-md-4 text-center animate-box">
-                <span class="yg-counter js-counter" data-from="0" data-to="4" data-speed="5000"
-                  data-refresh-interval="50"></span>
-                <span class="yg-counter-label">Partners</span>
-              </div>
-            </div>
-          </div>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3.5 19c.6-3 2.8-4.5 5.5-4.5S13.9 16 14.5 19M14.8 14.6c2.3.2 4 1.5 4.6 3.9"/></svg>
+          <h3>Company Culture</h3>
+          <p>Documenting how you work so culture scales with headcount.</p>
         </div>
-        <section class="yg-experience" data-section="experience">
-          <div class="yg-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Experience</span>
-                <h2 class="yg-heading animate-box">Work Experience</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="timeline-centered">
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-5">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="#">People Operations</a> <span>November 2022 - Present</span></h2>
-                        <h3>Outside</h3>
-                        <p>Leading the People Operations team looking at the HR, Finance and General Operations of the company. Creating an enabling work environment.</p>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="#">HR Transformation Consultant</a> <span>July 2021 - December 2022</span></h2>
-                        <h3>DayoneHR</h3>
-                        <p>Help clients develop their People strategies and advise on the design and implementation of global HR transformation programmes</p>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-2">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="#">Talent Manager</a> <span>June 2019 - May 2021</span></h2>
-                        <h3>CloudFactory Limited</h3>
-                        <p>Searching for talent, signing clients, negotiating deals and mentoring juniors. Understand what it takes for talent to succeed, have a keen eye for talent, and be able to establish trust in order to sign personnel</p>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-3">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="#">Sr. HR Officer</a> <span>June 2015 - May 2019</span></h2>
-                        <h3>CloudFactory Limited</h3>
-                        <p>Assisting in implementation of Global HR initiatives and practices and will support the HR Lead to maximize staffing resources and performance, promote a positive organizational culture, minimize risk and ensure economy and efficiency of work processes.</p>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-4">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="#">Admin Officer</a> <span>June 2011 - May 2015</span></h2>
-                        <h3>Backward Society Education</h3>
-                        <p>Responsible for providing administrative support to an organization. The duties include organizing company records, overseeing department budgets and maintaining inventory of office supplies.</p>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-none">
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="yg-experience" data-section="engagements">
-          <div class="yg-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Engagements</span>
-                <h2 class="yg-heading animate-box">Work Engagements</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-	         <div class="timeline-centered">
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-2">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="https://heraldcollege.edu.np/" target="_blank">Visiting Faculty, Feb 2023 </a></h2>
-                        <h3>Herald College</h3>
-                      </div>
-                    </div>
-		  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-2">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="https://www.weduglobal.org/" target="_blank">WEDU Mentor, Oct 2022 </a></h2>
-                        <h3>WEDU</h3>
-                      </div>
-                    </div>
-                <div class="timeline-centered">
-		 </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-5">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="https://skilllabasia.com/" target="_blank">Learning Engagement Coach, July 2020 </a></h2>
-                        <h3>Skill Lab</h3>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="https://skilllabasia.com/" target="_blank">Subject Expert- HR, July 2021</a></h2>
-                        <h3>Skill Lab</h3>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-3">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="https://iamremarkable.withgoogle.com/" target="_blank">IamRemarkable Facilitator, August 2020 </a></h2>
-                        <h3>IamRemarkable</h3>
-                        <img src="./images/remakeable.png" class="remarkable" />
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-4">
-                        <i class="icon-pen2"></i>
-                      </div>
-                      <div class="timeline-label">
-                        <h2><a href="http://www.nerfinternational.org/" target="_blank">Program Coordinator, Jan 2016</a></h2>
-                        <h3>Nepal Earthquake Recovery Fund (NERF)</h3>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-none">
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-         </section>
-         <section class="yg-blog" data-section="blog">
-           <div class="yg-narrow-content">
-             <div class="row">
-               <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                 <span class="heading-meta">Read</span>
-                     <h2 class="yg-heading">Recent Blog</h2>
-               </div>
-             </div>
-             <div class="row">
-               <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                 <div class="blog-entry">
-                   <a href="https://yoginashakya.medium.com/does-mba-really-help-you-with-your-career-eb134b9d57d1" target="_blank" class="blog-img">
-                     <img src="images/xblog-1.jpg" class="img-responsive">
-                   </a>
-                   <div class="desc">
-                          <span><small>August 14, 2021 </small> | <small> Careers </small></span>
-                           <h3><a href="https://yoginashakya.medium.com/does-mba-really-help-you-with-your-career-eb134b9d57d1" target="_blank">Does MBA really help you with your career?</a></h3>
-                           <p>What does MBA really teach you or what do you learn?</p>
-                   </div>
-                 </div>
-               </div>
-              <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-                <div class="blog-entry">
-                  <a href="https://yoginashakya.medium.com/is-hr-only-for-running-the-company-wheels-f7166378c8d6" target="_blank" class="blog-img"><img src="images/xblog-2.jpg"
-                      class="img-responsive" alt="image"></a>
-                  <div class="desc">
-                    <span><small>August 30, 2021 </small> | <small> HR </small></span>
-                    <h3><a href="https://yoginashakya.medium.com/is-hr-only-for-running-the-company-wheels-f7166378c8d6" target="_blank">Is HR only for running the company wheels?</a></h3>
-                    <p>Human Resources are known by many names these days</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                <div class="blog-entry">
-                  <a href="https://yoginashakya.medium.com/employment-environment-in-nepal-af54d5664e91" target="_blank" class="blog-img"><img src="images/xblog-3.jpg"
-                      class="img-responsive" alt="image"></a>
-                  <div class="desc">
-                    <span><small>September 30, 2021 </small> | <small> Inspiration </small></span>
-                    <h3><a href="https://yoginashakya.medium.com/employment-environment-in-nepal-af54d5664e91" target="_blank">Employment Environment in Nepal</a></h3>
-                    <p>It is an agreement that should be based on mutual benefits.
-                      ocean.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                <div class="blog-entry">
-                  <a href="https://yoginashakya.medium.com/hr-and-technology-automation-6d59f060f9c8" target="_blank" class="blog-img"><img src="images/hr-automation.jpg"
-                      class="img-responsive" alt="image"></a>
-                  <div class="desc">
-                    <span><small>February 08, 2022 </small> | <small> Automation </small></span>
-                    <h3><a href="https://yoginashakya.medium.com/hr-and-technology-automation-6d59f060f9c8" target="_blank">HR and Technology & Automation</a></h3>
-                    <p>When it is human in human resources should not they only talk about humans and not technology?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                <div class="blog-entry">
-                  <a href="https://yoginashakya.medium.com/fuel-for-my-hr-passion-afe1725b9e2f" target="_blank" class="blog-img"><img src="images/hr-fuel.jpg"
-                      class="img-responsive" alt="image"></a>
-                  <div class="desc">
-                    <span><small>March 20, 2022 </small> | <small> Fuel </small></span>
-                    <h3><a href="https://yoginashakya.medium.com/fuel-for-my-hr-passion-afe1725b9e2f" target="_blank">Fuel for My HR Passion</a></h3>
-                    <p>Having worked as an HR Professional, at times I feel like I chose a wrong path.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="yg-contact" data-section="contact">
-          <div class="yg-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Get in Touch</span>
-                <h2 class="yg-heading">Contact</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="yg-feature yg-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="yg-icon">
-                    <i class="icon-globe-outline"></i>
-                  </div>
-                  <div class="yg-text">
-                    <p><a href="mailto:shakyogina@gmail.com"><span class="__cf_email__" data-cfemail="61080f070e21050e0c00080f4f020e0c">shakyogina@gmail.com</span></a></p>
-                  </div>
-                </div>
-                <div class="yg-feature yg-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="yg-icon">
-                    <i class="icon-map"></i>
-                  </div>
-                  <div class="yg-text">
-                    <p>Kathmandu, Nepal</p>
-                  </div>
-                </div>
-                <!-- <div class="yg-feature yg-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="yg-icon">
-                    <i class="icon-phone"></i>
-                  </div>
-                  <div class="yg-text">
-                    <p><a href="tel://">+977</a></p>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        </section>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5.2 5.2 0 0 1 9-4 5.2 5.2 0 0 1 9 4c-2 4.5-9 9-9 9z"/></svg>
+          <h3>Employee Wellbeing</h3>
+          <p>Practices that keep people healthy, engaged and growing.</p>
+        </div>
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js"></script>
-  <script src="js/all.js"></script>
-  <script>
-    eval(mod_pagespeed_DMtCOhRI$8);
-  </script>
-  <script>
-    eval(mod_pagespeed_5FoFS8hzQs);
-  </script>
-  <script>
-    eval(mod_pagespeed_zxWiKzenpV);
-  </script>
-  <script>
-    eval(mod_pagespeed_3VV3SdTttZ);
-  </script>
-  <script src="js/theme.js"></script>
-  <script>
-    eval(mod_pagespeed_o9wd50kRIS);
-  </script>
-  <script>
-    eval(mod_pagespeed_36JYMA6VkX);
-  </script>
-  <script>
-    eval(mod_pagespeed_d7RBuNVHpz);
-  </script>
-</body>
+</section>
 
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">What I do</p>
+      <h2>Six ways I strengthen your HR function</h2>
+      <p>From your first HR hire to your hundredth employee — practical, hands-on consulting built around where your company is right now.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal"><span class="tag">Systems</span><h3>HR Tech Stack Selection &amp; Implementation</h3><p>Choose, configure and roll out the platforms that automate the admin and surface the data you need.</p></article>
+      <article class="svc reveal"><span class="tag">Policy</span><h3>Policies Creation</h3><p>Employment policies written for your context — practical, fair and ready for sign-off.</p></article>
+      <article class="svc reveal"><span class="tag">Process</span><h3>Process Creation &amp; Documentation</h3><p>Onboarding to offboarding, mapped and documented so nothing depends on memory.</p></article>
+      <article class="svc reveal"><span class="tag">Compliance</span><h3>HR Compliance Audit</h3><p>A clear-eyed review of where you stand against labour requirements, and a plan to close the gaps.</p></article>
+      <article class="svc reveal"><span class="tag">Culture</span><h3>Company Culture Documentation</h3><p>Capture the values and ways of working that make your company yours — before scale dilutes them.</p></article>
+      <article class="svc reveal"><span class="tag">Projects</span><h3>Focused HR Projects</h3><p>Targeted engagements on any aspect of HR, scoped to a clear outcome and timeline.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Experience</p>
+      <h2>One thread, fourteen years</h2>
+      <p>From the front desk to leading People Operations — every role added another layer to how I build HR functions today.</p>
+    </div>
+    <div class="thread">
+      <svg class="thread-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="threadGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#E8A33D"/>
+            <stop offset="1" stop-color="#2B2440"/>
+          </linearGradient>
+        </defs>
+        <path class="track" d=""/>
+        <path class="prog" d=""/>
+        <circle class="rider" r="6" cx="10" cy="16"/>
+      </svg>
+      <div class="job now reveal">
+        <span class="when">Nov 2022 — Present</span>
+        <h3>People Operations Lead</h3>
+        <div class="org">Outside</div>
+        <p>Leading the People Operations team across HR, finance and general operations — creating an enabling work environment as the company grows.</p>
+      </div>
+      <div class="job reveal">
+        <span class="when">Jul 2021 — Dec 2022</span>
+        <h3>HR Transformation Consultant</h3>
+        <div class="org">DayoneHR</div>
+        <p>Helped clients develop people strategies and advised on the design and delivery of global HR transformation programmes.</p>
+      </div>
+      <div class="job reveal">
+        <span class="when">Jun 2019 — May 2021</span>
+        <h3>Talent Manager</h3>
+        <div class="org">CloudFactory</div>
+        <p>Sourced talent, signed clients, negotiated deals and mentored juniors — building the trust it takes to bring great people on board.</p>
+      </div>
+      <div class="job reveal">
+        <span class="when">Jun 2015 — May 2019</span>
+        <h3>Senior HR Officer</h3>
+        <div class="org">CloudFactory</div>
+        <p>Implemented global HR initiatives, supported staffing and performance, promoted a positive culture and tightened work processes.</p>
+      </div>
+      <div class="job reveal">
+        <span class="when">Jun 2011 — May 2015</span>
+        <h3>Admin Officer</h3>
+        <div class="org">Backward Society Education (BASE)</div>
+        <p>Kept operations running — records, budgets, inventory — and discovered that managing the people side of work was the part I loved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="engagements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Beyond client work</p>
+      <h2>Teaching, mentoring, giving back</h2>
+    </div>
+    <div class="eng-grid">
+      <a class="eng reveal" href="https://heraldcollege.edu.np/" target="_blank" rel="noopener"><div class="role">Visiting Faculty</div><div class="meta"><span class="org">Herald College</span><span class="yr">2023</span></div></a>
+      <a class="eng reveal" href="https://www.weduglobal.org/" target="_blank" rel="noopener"><div class="role">Mentor</div><div class="meta"><span class="org">WEDU Global</span><span class="yr">2022</span></div></a>
+      <a class="eng reveal" href="https://skilllabasia.com/" target="_blank" rel="noopener"><div class="role">Subject Expert — HR</div><div class="meta"><span class="org">Skill Lab</span><span class="yr">2021</span></div></a>
+      <a class="eng reveal" href="https://skilllabasia.com/" target="_blank" rel="noopener"><div class="role">Learning Engagement Coach</div><div class="meta"><span class="org">Skill Lab</span><span class="yr">2020</span></div></a>
+      <a class="eng reveal" href="https://iamremarkable.withgoogle.com/" target="_blank" rel="noopener"><div class="role">#IamRemarkable Facilitator</div><div class="meta"><span class="org">Google</span><span class="yr">2020</span></div></a>
+      <a class="eng reveal" href="http://www.nerfinternational.org/" target="_blank" rel="noopener"><div class="role">Program Coordinator</div><div class="meta"><span class="org">Nepal Earthquake Recovery Fund</span><span class="yr">2016</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Writing</p>
+      <h2>Notes on HR, careers and work in Nepal</h2>
+    </div>
+    <div class="posts">
+      <a class="post reveal" href="https://yoginashakya.medium.com/fuel-for-my-hr-passion-afe1725b9e2f" target="_blank" rel="noopener">
+        <span class="cat">Reflection</span><h3>Fuel for My HR Passion</h3>
+        <p>Having worked as an HR professional, at times I feel like I chose the wrong path — and then I remember why I didn't.</p>
+        <span class="date">March 2022</span>
+      </a>
+      <a class="post reveal" href="https://yoginashakya.medium.com/hr-and-technology-automation-6d59f060f9c8" target="_blank" rel="noopener">
+        <span class="cat">Automation</span><h3>HR, Technology &amp; Automation</h3>
+        <p>When it's <em>human</em> resources, shouldn't we only talk about humans — and not technology?</p>
+        <span class="date">February 2022</span>
+      </a>
+      <a class="post reveal" href="https://yoginashakya.medium.com/employment-environment-in-nepal-af54d5664e91" target="_blank" rel="noopener">
+        <span class="cat">Nepal</span><h3>Employment Environment in Nepal</h3>
+        <p>Employment is an agreement that should be built on mutual benefit.</p>
+        <span class="date">September 2021</span>
+      </a>
+      <a class="post reveal" href="https://yoginashakya.medium.com/is-hr-only-for-running-the-company-wheels-f7166378c8d6" target="_blank" rel="noopener">
+        <span class="cat">HR</span><h3>Is HR Only for Running the Company Wheels?</h3>
+        <p>Human Resources goes by many names these days — but what is it really for?</p>
+        <span class="date">August 2021</span>
+      </a>
+      <a class="post reveal" href="https://yoginashakya.medium.com/does-mba-really-help-you-with-your-career-eb134b9d57d1" target="_blank" rel="noopener">
+        <span class="cat">Careers</span><h3>Does an MBA Really Help Your Career?</h3>
+        <p>What does an MBA actually teach you — and what do you really learn?</p>
+        <span class="date">August 2021</span>
+      </a>
+    </div>
+    <p class="blog-more reveal"><a href="https://yoginashakya.medium.com/" target="_blank" rel="noopener">Read more on Medium →</a></p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <p class="kicker">Get in touch</p>
+    <h2>Ready to build an HR function your people deserve?</h2>
+    <p>Whether you're hiring your first HR person or rebuilding the function from the ground up — let's talk about where you are and what you need.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:shakyogina@gmail.com">shakyogina@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/yogina-shakya-705298a0/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+    <p class="loc">Kathmandu, Nepal · Working with clients at home and abroad</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Yogina Shakya. All rights reserved.</span>
+    <a href="https://www.linkedin.com/in/yogina-shakya-705298a0/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+function toggleMenu(btn){
+  const m = document.getElementById('menu');
+  const open = m.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('menu').classList.remove('open');
+}));
+
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---- scroll-drawn career thread ---- */
+(function(){
+  const thread = document.querySelector('.thread');
+  if(!thread) return;
+  const svg   = thread.querySelector('.thread-svg');
+  const track = svg.querySelector('.track');
+  const prog  = svg.querySelector('.prog');
+  const rider = svg.querySelector('.rider');
+  const jobs  = [...thread.querySelectorAll('.job')];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let len = 0, marks = [];
+
+  function build(){
+    const tr = thread.getBoundingClientRect();
+    svg.setAttribute('width', 60);
+    svg.setAttribute('height', tr.height);
+    const pts = jobs.map(j=>{
+      const r = j.getBoundingClientRect();
+      return { x:10, y: r.top - tr.top + 16 };
+    });
+    let d = `M ${pts[0].x} ${pts[0].y}`;
+    for(let i=1;i<pts.length;i++){
+      const p0=pts[i-1], p1=pts[i], my=(p0.y+p1.y)/2;
+      const wig = i%2 ? 34 : 8;               /* gentle weave, like a real path */
+      d += ` C ${p0.x+wig} ${my}, ${p1.x+wig} ${my}, ${p1.x} ${p1.y}`;
+    }
+    track.setAttribute('d', d);
+    prog.setAttribute('d', d);
+    len = prog.getTotalLength();
+    prog.style.strokeDasharray = len;
+    /* length along the path where each marker sits (approx by y) */
+    marks = pts.map(p=>{
+      let lo=0, hi=len;
+      for(let k=0;k<20;k++){
+        const mid=(lo+hi)/2;
+        (prog.getPointAtLength(mid).y < p.y) ? lo=mid : hi=mid;
+      }
+      return {el: jobs[pts.indexOf(p)], at: lo};
+    });
+    update();
+  }
+
+  function update(){
+    const r = thread.getBoundingClientRect();
+    let t = (innerHeight*0.78 - r.top) / r.height;   /* line tip rides ~3/4 down the screen */
+    t = Math.min(Math.max(t,0),1);
+    if(reduced) t = 1;
+    const at = len * t;
+    prog.style.strokeDashoffset = len - at;
+    const p = prog.getPointAtLength(at);
+    rider.setAttribute('cx', p.x);
+    rider.setAttribute('cy', p.y);
+    rider.style.opacity = (t>0 && t<1) ? 1 : (t>=1 ? 1 : 0);
+    marks.forEach(m=>m.el.classList.toggle('lit', at >= m.at - 4));
+  }
+
+  build();
+  addEventListener('resize', build);
+  if(!reduced){
+    addEventListener('scroll', ()=>requestAnimationFrame(update), {passive:true});
+  }
+})();
+</script>
+</body>
 </html>
